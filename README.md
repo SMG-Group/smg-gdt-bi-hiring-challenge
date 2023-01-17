@@ -1,1 +1,3 @@
-# smg-gdt-bi-hiring-challenge
+# smg-gdt-bi-hiring-challenge 
+
+Hello friend!
