@@ -1,0 +1,1 @@
+# smg-gdt-bi-hiring-challenge
