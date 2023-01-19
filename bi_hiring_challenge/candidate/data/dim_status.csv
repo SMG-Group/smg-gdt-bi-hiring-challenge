@@ -1,5 +1,0 @@
-status_id,status_description,valid_from,valid_to
-10,Active,2000-01-01,
-15,Sold,2000-01-01,
-20,Inactive,2000-01-01,
-25,Cancelled,2000-01-01,
