@@ -1,5 +1,7 @@
 # smg-gdt-bi-hiring-challenge 
 
+<a name="readme-top"></a>
+
 <!-- SMG LOGO -->
 <br />
 <div align="center">
@@ -76,7 +78,12 @@ The goal of this project is to provide a comprehensive BI hiring challenge to ou
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Essentially, there are two approaches - first, the live Jypiter Notebook can be found [here](https://mybinder.org/v2/gh/codeclash/cs/HEAD?labpath=playground.ipynb), and for those who prefer more control over their local environment, the raw flat files are provided. In case of choosing the first option, we expect a pedantic approach and verbose cells, guiding us through candidate's thought process in their approach to solving the challenge. Second option, we expect a pull request, which will be evaluated by the same criteria. The structure is as follows: 
+Essentially, there are two approaches - first, the live Jypiter Notebook can be found [here](https://mybinder.org/v2/gh/codeclash/cs/HEAD?labpath=playground.ipynb). Please note the environment has two conditions; 
+* From the moment it is accessed, it is up and running for 6h; 
+* It will  shut down if inactive for ten minutes, or at the end of the 6h period;  
+* More info can be found [here](https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html).
+
+For those who prefer more control over their local environment, the raw flat files are provided. In case of choosing the first option, we expect a pedantic approach and verbose cells, guiding us through candidate's thought process in their approach to solving the challenge. Second option, we expect a pull request, which will be evaluated by the same criteria. The structure is as follows: 
 
 ```
 ├── README.md
@@ -180,7 +187,7 @@ Please note these methods can be completely replaced or modified in any way, as 
 
 * Task q02: 5 points (1 point per component);
 
-* Task 03 : 5 points (1 point per component);
+* Task q03 : 5 points (1 point per component);
 
 <br />
 

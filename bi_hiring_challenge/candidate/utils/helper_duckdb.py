@@ -19,7 +19,7 @@ pd.set_option("display.max_rows", None)
 pd.set_option("display.min_rows", 2000)
 
 # path to the folder with the datasets (eg. absolute path like C:/Users/xyz/Documents/01-datasets)
-basepath = '<path-to-01-datasets>'
+basepath = '<path-to-data>' # candidate/data
 
 # preparing the data access
 cursor = duckdb.connect()
