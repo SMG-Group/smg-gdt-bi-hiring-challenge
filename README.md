@@ -17,7 +17,7 @@
     <a href="https://swissmarketplace.group/"><strong>Explore the Website »</strong></a>
     <br />
     <br />
-    <a href="https://mybinder.org/v2/gh/SMG-Group/smg-gdt-bi-hiring-challenge/HEAD?labpath=smg_gdt_bi_hiring_challenge.ipynbhttps://mybinder.org/v2/gh/SMG-Group/smg-gdt-bi-hiring-challenge/HEAD?labpath=smg_gdt_bi_hiring_challenge.ipynb">Live Jypiter Notebook</a>
+    <a href="https://mybinder.org/v2/gh/SMG-Group/smg-gdt-bi-hiring-challenge/19d410ec5311f42ed2e2933a44662052668ebc96?urlpath=lab%2Ftree%2Fsmg_gdt_bi_hiring_challenge.ipynb">Live Jypiter Notebook</a>
     ·
     <a href="https://github.com/github_username/smg-gdt-bi-hiring-challenge/issues">Report Bug</a>
     ·
@@ -78,7 +78,7 @@ The goal of this project is to provide a comprehensive BI hiring challenge to ou
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Essentially, there are two approaches - first, the live Jypiter Notebook can be found [here](https://mybinder.org/v2/gh/SMG-Group/smg-gdt-bi-hiring-challenge/HEAD?labpath=smg_gdt_bi_hiring_challenge.ipynbhttps://mybinder.org/v2/gh/SMG-Group/smg-gdt-bi-hiring-challenge/HEAD?labpath=smg_gdt_bi_hiring_challenge.ipynb). Please note the environment has two conditions; 
+Essentially, there are two approaches - first, the live Jypiter Notebook can be found [here](https://mybinder.org/v2/gh/SMG-Group/smg-gdt-bi-hiring-challenge/19d410ec5311f42ed2e2933a44662052668ebc96?urlpath=lab%2Ftree%2Fsmg_gdt_bi_hiring_challenge.ipynb). Please note the environment has two conditions; 
 * From the moment it is accessed, it is up and running for 6h; 
 * It will  shut down if inactive for ten minutes, or at the end of the 6h period;  
 * More info can be found [here](https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html).
