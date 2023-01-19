@@ -17,7 +17,7 @@
     <a href="https://swissmarketplace.group/"><strong>Explore the Website »</strong></a>
     <br />
     <br />
-    <a href="https://mybinder.org/v2/gh/codeclash/cs/HEAD?labpath=playground.ipynb">Live Jypiter Notebook</a>
+    <a href="https://mybinder.org/v2/gh/SMG-Group/smg-gdt-bi-hiring-challenge/HEAD?labpath=smg_gdt_bi_hiring_challenge.ipynbhttps://mybinder.org/v2/gh/SMG-Group/smg-gdt-bi-hiring-challenge/HEAD?labpath=smg_gdt_bi_hiring_challenge.ipynb">Live Jypiter Notebook</a>
     ·
     <a href="https://github.com/github_username/smg-gdt-bi-hiring-challenge/issues">Report Bug</a>
     ·
@@ -78,7 +78,7 @@ The goal of this project is to provide a comprehensive BI hiring challenge to ou
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Essentially, there are two approaches - first, the live Jypiter Notebook can be found [here](https://mybinder.org/v2/gh/codeclash/cs/HEAD?labpath=playground.ipynb). Please note the environment has two conditions; 
+Essentially, there are two approaches - first, the live Jypiter Notebook can be found [here](https://mybinder.org/v2/gh/SMG-Group/smg-gdt-bi-hiring-challenge/HEAD?labpath=smg_gdt_bi_hiring_challenge.ipynbhttps://mybinder.org/v2/gh/SMG-Group/smg-gdt-bi-hiring-challenge/HEAD?labpath=smg_gdt_bi_hiring_challenge.ipynb). Please note the environment has two conditions; 
 * From the moment it is accessed, it is up and running for 6h; 
 * It will  shut down if inactive for ten minutes, or at the end of the 6h period;  
 * More info can be found [here](https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html).
@@ -86,25 +86,28 @@ Essentially, there are two approaches - first, the live Jypiter Notebook can be 
 For those who prefer more control over their local environment, the raw flat files are provided. In case of choosing the first option, we expect a pedantic approach and verbose cells, guiding us through candidate's thought process in their approach to solving the challenge. Second option, we expect a pull request, which will be evaluated by the same criteria. The structure is as follows: 
 
 ```
+.
 ├── README.md
-└── bi_hiring_challenge
-    ├── candidate
-    │   ├── answers
-    │   ├── data
-    │   │   ├── dim_date.csv
-    │   │   ├── dim_platform.csv
-    │   │   ├── dim_product_type.csv
-    │   │   ├── dim_status.csv
-    │   │   ├── dim_user.csv
-    │   │   └── fct_listings.csv
-    │   ├── questions
-    │   │   ├── question_q01.md
-    │   │   ├── question_q02.md
-    │   │   └── question_q03.md
-    │   └── utils
-    │       └── helper_duckdb.py
-    └── repo_assets
-        └── smg-logo-green.png
+├── candidate
+│   ├── answers
+│   │   └── placeholder.md
+│   ├── data
+│   │   ├── dim_date.csv
+│   │   ├── dim_platform.csv
+│   │   ├── dim_product_type.csv
+│   │   ├── dim_status.csv
+│   │   ├── dim_user.csv
+│   │   └── fct_listings.csv
+│   ├── questions
+│   │   ├── question_q01.md
+│   │   ├── question_q02.md
+│   │   └── question_q03.md
+│   └── utils
+│       └── helper_duckdb.py
+├── repo_assets
+│   └── smg-logo-green.png
+├── requirements.txt
+└── smg_gdt_bi_hiring_challenge.ipynb
 ```
 
 Resources the candidate requires for a local setup are contained withing the `candidate` folder: 
