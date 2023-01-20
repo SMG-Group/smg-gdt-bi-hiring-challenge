@@ -17,8 +17,6 @@
     <a href="https://swissmarketplace.group/"><strong>Explore the Website »</strong></a>
     <br />
     <br />
-    <a href="https://mybinder.org/v2/gh/SMG-Group/smg-gdt-bi-hiring-challenge/19d410ec5311f42ed2e2933a44662052668ebc96?urlpath=lab%2Ftree%2Fsmg_gdt_bi_hiring_challenge.ipynb">Live Jypiter Notebook</a>
-    ·
     <a href="https://github.com/github_username/smg-gdt-bi-hiring-challenge/issues">Report Bug</a>
     ·
     <a href="https://github.com/github_username/smg-gdt-bi-hiring-challenge/issues">Request Feature</a>
@@ -56,9 +54,11 @@
 
 <!--[![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-The goal of this project is to provide a comprehensive BI hiring challenge to our candidates, offering a standardized and well structured case study both as an out-of-the-box online solution as well as an offline local one. 
+The goal of this project is to provide a comprehensive BI hiring challenge to our candidates, offering a standardized and well structured case study while allowing the candidates full autonomy over the approach. This repository contains the standardized raw flat files which can be ingested in any way best suiting the candidate, three different challenges to be tackled in regards to the data provided, and subtleties for extra points for those so inclined. There's no strict time constraint on this case study. We expect candidates to inform us when they are ready and to respect the honor system on the time invested and approaches taken. We're evaluating the knowledge and understanding of core data concepts, BI techniques, quality of work. Each will be addressed in the interview following the completion of the case study. 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+We're estimating one full work day (eight working hours) to complete a 100% of what this case study has to offer. Candidates are offered twice as much. In case of investing more (or less) than the estimate, we expect open communication on the context and welcome any approach and efforts invested. 
+
+>*TL:DR - from Excel to a full blown Python environment, any approach is welcome as long as it gets the job done.*
 
 
 
@@ -78,12 +78,7 @@ The goal of this project is to provide a comprehensive BI hiring challenge to ou
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Essentially, there are two approaches - first, the live Jypiter Notebook can be found [here](https://mybinder.org/v2/gh/SMG-Group/smg-gdt-bi-hiring-challenge/19d410ec5311f42ed2e2933a44662052668ebc96?urlpath=lab%2Ftree%2Fsmg_gdt_bi_hiring_challenge.ipynb). Please note the environment has two conditions; 
-* From the moment it is accessed, it is up and running for 6h; 
-* It will  shut down if inactive for ten minutes, or at the end of the 6h period;  
-* More info can be found [here](https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html).
-
-For those who prefer more control over their local environment, the raw flat files are provided. In case of choosing the first option, we expect a pedantic approach and verbose cells, guiding us through candidate's thought process in their approach to solving the challenge. Second option, we expect a pull request, which will be evaluated by the same criteria. The structure is as follows: 
+Essentially, the approach is open and involves setting up a local environment, processing the provided raw flat files, answering the questions and presenting the thought process behind the whole approach to solving the challenge. Main evaluation criteria is the validity of the SQL queries, followed by the presentation layer of candidate's choosing, and finally the overall quality of the setup, process, and result. We expect a pull request by the candidate, marking the completion of the challenges. The repo structure is as follows: 
 
 ```
 .
@@ -104,14 +99,12 @@ For those who prefer more control over their local environment, the raw flat fil
 │   │   └── question_q03.md
 │   └── utils
 │       └── helper_duckdb.py
-├── repo_assets
-│   └── smg-logo-green.png
-├── requirements.txt
-└── smg_gdt_bi_hiring_challenge.ipynb
+└── repo_assets
+    └── smg-logo-green.png
 ```
 
 Resources the candidate requires for a local setup are contained withing the `candidate` folder: 
-- `answers` - target location for the assets used in the PR provided by the candidate; 
+- `answers` - target location for the main assets used in the PR provided by the candidate; 
 - `data` - flat files organized in a star schema, to be consumed and processed in search for answers; 
 - `questions` - containing tasks to be tackled; 
 - `utils` - a quick helper script to initiate a duckdb instance. Its usage is optional, can be ignored, modified, extended or replaced... candidate's choice. 
@@ -120,14 +113,14 @@ Resources the candidate requires for a local setup are contained withing the `ca
 
 ### Prerequisites
 
-To successfully solve all of the tasks presented by the challenges in this case study, one would need a  way to ingest and process flat files, write and test SQL queries, visualize the results. 
+To successfully solve all of the tasks presented by the challenges in this case study, one would need a way to ingest and process flat files, write and test SQL queries, visualize the results. 
 
-For a local environment, these are the minimal requirements: 
+For a local environment, these are the quickest minimal requirements: 
 * Python (3.9.x and newer); 
     * pandas
     * duckdb
 
-Please note these methods can be completely replaced or modified in any way, as long as the end result is correct.
+Please note these methods and tools can be completely replaced or modified in any way, as long as the end result is correct.
 
 
 ### Setup
