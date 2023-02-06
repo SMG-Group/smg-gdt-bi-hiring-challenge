@@ -104,7 +104,7 @@ Essentially, the approach is open and involves setting up a local environment, p
 ```
 
 Resources the candidate requires for a local setup are contained withing the `candidate` folder: 
-- `answers` - target location for the main assets used in the PR provided by the candidate; 
+- `answers` - target location for the main assets used in the PR provided by the candidate. **Please include the output results of the queries in .csv format under the answers folder.**; 
 - `data` - flat files organized in a star schema, to be consumed and processed in search for answers; 
 - `questions` - containing tasks to be tackled; 
 - `utils` - a quick helper script to initiate a duckdb instance. Its usage is optional, can be ignored, modified, extended or replaced... candidate's choice. 
