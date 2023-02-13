@@ -1,0 +1,8 @@
+select fct_listings.listing_date_key, dim_platform.platform, dim_status.status_description, count(*) as Listings from fct_listings
+left join dim_platform 
+on dim_platform.platform_id = fct_listings.platform_id and 
+fct_listings.listing_date_key >= dim_platform.valid_from and
+fct_listings.listing_date_key < if(dim_platform.valid_to is null,'2099-12-31',dim_platform.valid_to)
+left join dim_status on dim_status.status_id = fct_listings.status_id
+group by 1,2,3
+order by fct_listings.listing_date_key asc;

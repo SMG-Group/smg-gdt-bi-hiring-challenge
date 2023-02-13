@@ -1,0 +1,13 @@
+select 
+a.product_type,
+datediff(a.valid_to_won, a.valid_from) as Days_diff
+from (
+select 
+dim_product_type.product_type_name as product_type, 
+fct_listings.valid_from as valid_from, 
+CASE when fct_listings.valid_to is NULL then '2023-02-11' ELSE fct_listings.valid_to end as valid_to_won
+from fct_listings
+left join dim_product_type on dim_product_type.product_type_id = fct_listings.product_type_id
+where status_id = 10) a
+order by days_diff DESC
+LIMIT 3;

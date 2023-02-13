@@ -1,0 +1,15 @@
+select * 
+from
+(select *, RANK() OVER (partition by platform order by sale_qty desc) as rank_ -- for bottom order change to asc 
+from
+(select dim_platform.platform, dim_product_type.product_type_name, count(*) as sale_qty from fct_listings 
+left join dim_platform on 
+fct_listings.platform_id = dim_platform.platform_id 
+	and fct_listings.listing_date_key >= dim_platform.valid_from and fct_listings.listing_date_key < if(dim_platform.valid_to is null,'2099-12-31',dim_platform.valid_to)
+left join dim_status on
+fct_listings.status_id = dim_status.status_id
+left join dim_product_type
+on fct_listings.product_type_id = dim_product_type.product_type_id
+where dim_status.status_description = 'sold'
+group by 1,2) a) b
+where b.rank_ <= 3;
