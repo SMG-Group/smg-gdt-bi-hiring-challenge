@@ -1,0 +1,6 @@
+select dim_product_type.product_type_name, round(SUM(price), 2) as Price_sum from fct_listings
+left join dim_product_type on dim_product_type.product_type_id = fct_listings.product_type_id
+left join dim_status on dim_status.status_id = fct_listings.status_id
+where dim_status.status_description = 'Sold'
+group by 1
+order by Price_sum DESC;
