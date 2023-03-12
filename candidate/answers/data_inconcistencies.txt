@@ -1,0 +1,86 @@
+
+/*
+intervals are overlapping and all listings are active
+*/
+
+SELECT 
+	*
+FROM (      
+	SELECT      
+		listing_id,
+		status_id,
+		valid_From,
+		valid_to,
+		lag(valid_to,1) OVER (PARTITION BY listing_id ORDER BY valid_From) PrevValidTo,      
+		lead(valid_From,1) OVER (PARTITION BY listing_id ORDER BY valid_From) NextValidFrom     
+	FROM fct_listings      
+	) CheckDateRange      
+WHERE (PrevValidTo IS NOT NULL AND PrevValidTo > valid_From) 
+	OR (NextValidFrom IS NOT NULL AND NextValidFrom < valid_to);
+
+/*
+gaps in intervals 
+*/
+
+SELECT 
+	*
+FROM (      
+	SELECT      
+		listing_id,
+		status_id,
+		valid_From,
+		valid_to,
+		lag(valid_to,1) OVER (PARTITION BY listing_id ORDER BY valid_From) PrevValidTo,      
+		lead(valid_From,1) OVER (PARTITION BY listing_id ORDER BY valid_From) NextValidFrom     
+	FROM fct_listings      
+	) CheckDateRange      
+WHERE (PrevValidTo IS NOT NULL AND PrevValidTo <> valid_From) 
+	OR (NextValidFrom IS NOT NULL AND NextValidFrom <> valid_to);
+
+
+/*
+The most interesting example of this case:
+
+SELECT 
+	* 
+FROM fct_listings
+WHERE listing_id = 551294;
+
+because there in first 3 rows data makes sense, but the latest rows stands out.
+So, listing was active, then sold on 28.12.2021. which matches with valid_from and valid_to dates.
+Then, listing was again active during the same day of 28.12.2021. and it's "valid to 28.12.2021.", 
+but it suddenly got "sold" even after expiring of valid_to date.
+*/
+
+/*
+There are listings with user which is not valid at the moment of creation of listing
+*/
+
+SELECT 
+	l.listing_id, 
+	l.valid_from, 
+	l.valid_to, 
+	u.*
+FROM 
+	( 
+	SELECT 
+		user_id, 
+		MIN(valid_from) AS valid_from 
+	FROM dim_user 
+	GROUP BY user_id
+	) u 
+RIGHT JOIN fct_listings l
+	ON u.user_id = l.user_id
+WHERE l.valid_from <= u.valid_from;
+
+/*
+Can a listing have 2 different products, platforms and users? 
+From my point of view it makes sense to have relationship:
+1 listing = 1 category of product, 1 user and 1 platform, so this in my opinion does not make sense.
+*/
+
+SELECT 
+	* 
+FROM fct_listings
+WHERE LISTING_ID = 551313;
+
